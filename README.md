@@ -31,21 +31,22 @@
             <li><a href="#11-project-closure">Project Closure</a></li>
         </ol>
     </li>
-    <li><a href="#requirements">Requirements</a>
-    <li><a href="#team">Team</a>
-    <li><a href="#contact">Contact</a>
-    <li><a href="#appendix-and-glossary">Appendix and Glossary</a>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#solution-and-design">Solution and Design</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#appendix-and-glossary">Appendix and Glossary</a></li>
   </ul>
 </details>
 
 ## Assumptions
 
 <ol>
-<li><strong>Main focus of this meeting is on system design and architecture and not project management or tooling.</strong></li>
 <li><strong>The Employee Management System (EMS) is a greenfield project.</strong></li>
 <li><strong>Organization use Active Directory as the user identity repository.</strong></li>
 <li><strong>Organization use Microsoft 365 for its office suite technologies.</strong></li>
 <li><strong>While the design and architecture are flexible enough to work with any cloud provider, we may reference specific cloud services or software-as-a-service (SaaS) applications to illustrate how our system might function in a real-world scenario.</strong></li>
+<li><strong>Main focus of this meeting is on system design and architecture and not project management or tooling.</strong></li>
 </ol>
 
 
@@ -223,6 +224,60 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Solution and Design -->
+<a id="solution-and-design"></a>
+
+## Solution and Design
+
+### <div style="vertical-align:middle"><img src="images/logo-workday.png" alt="logo" height="140px"  /></div>
+
+<p>I propose adopting Workday as the HR solution for the frontend/client of the Employee Management system. Workday is a leading cloud-based human capital management (HCM) platform that offers a comprehensive suite of applications for managing various HR functions. Its cloud-native architecture, coupled with its extensive integration capabilities, makes it an ideal choice for our organization.</p>
+
+#### Key Benefits of Workday:
+
+<ul style="list-style-type: square;">
+  <li><strong>Scalability and Flexibility</strong> : Workday's cloud-based nature ensures that it can easily scale to accommodate our organization's growth and changing needs without requiring significant infrastructure investments.</li>
+  <li><strong>Streamlined Processes</strong>: Workday offers a unified platform for managing core HR functions, such as talent acquisition, performance management, compensation, benefits administration, and time and attendance tracking. This streamlines our HR processes and reduces administrative burdens.</li>
+  <li><strong>Real-time Insights</strong>: Workday provides robust analytics and reporting capabilities, enabling us to gain real-time insights into our workforce data and make data-driven decisions.</li>
+  <li><strong>Integration Capabilities</strong>: Workday seamlessly <code>integrates with on-premises and cloud-based systems</code>, ensuring a smooth transition and compatibility with our existing technology infrastructure.</li>
+  <li><strong>Continuous Innovation</strong>: As a cloud-based solution, Workday is constantly updated with new features and functionalities, ensuring that we have access to the latest HR best practices and technologies.</li>
+</ul>
+
+Meets Non-Functional Requirements of `simplicity`, `innovation`, `practical`.
+
+#### Workday API's:
+
+`Employee Management`:
+
+```
+o	Record management including personal details, job history.
+o	Track employee assignment history to different positions.  
+```
+
+![workday-api-personal](images/workday-api-personal.png)
+![workday-api-history](images/workday-api-history.png)
+
+`Position Management`:
+
+```
+o	Create, reclassify, and abolish position.
+o	Assign employees to position.
+o	Track position assignment history to different employees.   
+```
+
+![workday-api-position-management](images/workday-api-position-management.png)
+![workday-api-track](images/workday-api-track.png)
+
+`Hiring workflow`:
+
+```
+o	Workflow for hiring managers to request new position or to fill an existing position.
+o	Approval process by HR liaison   
+```
+
+![workday-api-hiring](images/workday-api-hiring.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Team Members -->
 
