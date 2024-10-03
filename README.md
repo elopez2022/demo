@@ -15,21 +15,9 @@
 <details open>
   <summary>Table of Contents</summary>
   <ul style="list-style-type: square;">
+    <li><a href="#introduction">Introduction</a>
     <li><a href="#assumptions">Assumptions</a>
     <li><a href="#project-outline">Project Outline</a>
-        <ol>
-            <li><a href="#1-project-management">Project Management</a></li>
-            <li><a href="#2-project-initiation">Project Initiation</a></li>
-            <li><a href="#3-requirements-gathering">Requirements Gathering</a></li>
-            <li><a href="#4-system-design">System Design</a></li>
-            <li><a href="#5-technology-selection">Technology Selection</a></li>
-            <li><a href="#6-development">Development</a></li>
-            <li><a href="#7-integration-and-testing">Integration and Testing</a></li>
-            <li><a href="#8-deployment">Deployment</a></li>
-            <li><a href="#9-training-and-documentation">Training and Documentation</a></li>
-            <li><a href="#10-post-deployment-support">Post-Deployment Support</a></li>
-            <li><a href="#11-project-closure">Project Closure</a></li>
-        </ol>
     </li>
     <li><a href="#requirements">Requirements</a></li>
     <li><a href="#solution-and-design">Solution and Design</a></li>
@@ -39,16 +27,20 @@
   </ul>
 </details>
 
+## Introduction
+
+In today's dynamic workplace, effective employee management is essential. The goal is to design intuitive and powerful application architectures that seamlessly integrate both on-premises and cloud-based environments. By prioritizing simplicity and innovation, we aim to streamline HR processes, empower businesses to achieve their goals, and create solutions that are easy to use, adaptable to changing needs, and capable of delivering real business value.
+
 ## Assumptions
 
-<ol>
+<ul style="list-style-type: square;">
 <li><strong>The Employee Management System (EMS) is a greenfield project.</strong></li>
 <li><strong>Organization use Active Directory as the user identity repository.</strong></li>
 <li><strong>Organization use Microsoft 365 for its office suite technologies.</strong></li>
 <li><strong>While the design and architecture are flexible enough to work with any cloud provider, we may reference specific cloud services or software-as-a-service (SaaS) applications to illustrate how our system might function in a real-world scenario.</strong></li>
 <li><strong>Main focus of this meeting is on system design and architecture and not project management or tooling.</strong></li>
-</ol>
-
+<li><strong>The architecture incorporates non-functional requirements for security, performance, reliability, uptime, and accuracy.</strong></li>
+</ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -238,8 +230,17 @@
 <ul style="list-style-type: square;">
   <li><strong>Scalability and Flexibility</strong> : Workday's cloud-based nature ensures that it can easily scale to accommodate our organization's growth and changing needs without requiring significant infrastructure investments.</li>
   <li><strong>Streamlined Processes</strong>: Workday offers a unified platform for managing core HR functions, such as talent acquisition, performance management, compensation, benefits administration, and time and attendance tracking. This streamlines our HR processes and reduces administrative burdens.</li>
-  <li><strong>Real-time Insights</strong>: Workday provides robust analytics and reporting capabilities, enabling us to gain real-time insights into our workforce data and make data-driven decisions.</li>
-  <li><strong>Integration Capabilities</strong>: Workday seamlessly <code>integrates with on-premises and cloud-based systems</code>, ensuring a smooth transition and compatibility with our existing technology infrastructure.</li>
+  <li><strong>Real-time Insights</strong>: Workday provides robust analytics and reporting capabilities, enabling us to gain real-time insights into our workforce data and make data-driven decisions.
+  <ul><li><strong>Workday Data-as-a-Service (DaaS)</strong> is a cloud-based service that provides valuable data insights to Workday customers. It offers various services, such as benchmarking and analytics, to help organizations make informed decisions and optimize their business performance.</li>
+  </ul>
+  </li>
+  <li><strong>Integration Capabilities</strong>: Workday seamlessly <code>integrates with on-premises and cloud-based systems</code>, ensuring a smooth transition and compatibility with our existing technology infrastructure.
+    <ul>
+  <li><strong>Workday RaaS (Reporting as a Service)</strong> is a powerful tool within the Workday platform that allows users to extract and analyze data from their Workday instances in real-time. It provides a flexible and efficient way to access and leverage your HR data for various purposes.</li>
+    <li><strong>Data Integration</strong>: Use Workday Integration Cloud to connect Workday to your backend system and synchronize data between the two platforms.</li>
+      <li><strong>Pre-built Connectors:</strong> Leverage pre-built connectors for common backend systems to simplify integration.</li>
+  </ul>
+  </li>
   <li><strong>Continuous Innovation</strong>: As a cloud-based solution, Workday is constantly updated with new features and functionalities, ensuring that we have access to the latest HR best practices and technologies.</li>
 </ul>
 
@@ -268,7 +269,7 @@ o	Track position assignment history to different employees.
 ![workday-api-position-management](images/workday-api-position-management.png)
 ![workday-api-track](images/workday-api-track.png)
 
-`Hiring workflow`:
+`Hiring Management`:
 
 ```
 o	Workflow for hiring managers to request new position or to fill an existing position.
@@ -276,6 +277,8 @@ o	Approval process by HR liaison
 ```
 
 ![workday-api-hiring](images/workday-api-hiring.png)
+
+`hiring workflow`: https://lucid.app/lucidchart/41cee53d-9f67-45b2-a025-6387505f89c4/view
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
