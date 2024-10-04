@@ -37,10 +37,11 @@ In today's dynamic workplace, effective employee management is essential. The go
 <li><strong>The Employee Management System (EMS) is a greenfield project.</strong></li>
 <li><strong>Organization use Active Directory as the user identity repository.</strong></li>
 <li><strong>Organization use Microsoft 365 for its office suite technologies.</strong></li>
-<li><strong>Organization has physical servers at their location when discussing the on-premises scenario.</strong></li>
+<li><strong>Organization has physical servers at their location or at a data center, when discussing the on-premises scenario.</strong></li>
+<li><strong>New EMS system will need to communicate or share data with other internal apps and processes.</strong></li>
 <li><strong>While the design and architecture are flexible enough to work with any cloud provider, we may reference specific cloud services or software-as-a-service (SaaS) applications to illustrate how our system might function in a real-world scenario.</strong></li>
 <li><strong>Main focus of this meeting is on system design and architecture and not project management or tooling.</strong></li>
-<li><strong>The architecture incorporates non-functional requirements for security, performance, reliability, uptime, and accuracy.</strong></li>
+
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -290,6 +291,13 @@ o	Approval process by HR liaison
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Cloud Architecture
+![on-premises-lucidchart](images/cloud-lucidchart.png)
+
+`Cloud Lucidchart`: https://lucid.app/lucidchart/b1c76bd3-052b-420e-8d5e-97f333eb6604/view
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- Team Members -->
 
 <a id="team"></a>
@@ -331,7 +339,10 @@ Project Link: [https://domain/caltrans/project_name](https://domain/caltrans/pro
 | Configure Workday to Microsoft Entra user provisioning | https://learn.microsoft.com/en-us/entra/identity/saas-apps/workday-inbound-cloud-only-tutorial |
 | Configure Workday for automatic user provisioning | https://learn.microsoft.com/en-us/entra/identity/saas-apps/workday-inbound-tutorial |
 
-
+| Workday ETL             | URL                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| How to Import Workday Data into SQL Server using SSIS | https://www.cdata.com/kb/tech/workday-ssis-task-import-2008.rst|
+| Instant data warehouse and data syncing for Workday | https://peliqan.io/connector/Workday/ |
 
 ### Explanation of Components and Interactions
 
@@ -372,9 +383,11 @@ Project Link: [https://domain/caltrans/project_name](https://domain/caltrans/pro
 ### Design Patterns
 
 1. **Microservices Architecture**: For both solutions, breaking down the application into smaller, independent services can improve scalability and maintainability.
-2. **Event-Driven Architecture**: Useful for the hiring workflow and approval processes, where different components can react to events asynchronously.
-3. **Data Integration Patterns**: Use APIs and ETL (Extract, Transform, Load) processes for data exchange and reconciliation with internal and statewide systems.
-4. **Security Patterns**: Implement OAuth or SAML for secure authentication and role-based access control (RBAC) for authorization.
+2. **Layered Architecture**: Separating concerns into different layers or components.
+3. **Containerization**: Packaging applications and their dependencies into self-contained units.
+4. **Event-Driven Architecture**: Useful for the hiring workflow and approval processes, where different components can react to events asynchronously.
+5. **Data Integration Patterns**: Use APIs and ETL (Extract, Transform, Load) processes for data exchange and reconciliation with internal and statewide systems.
+6. **Security Patterns**: Implement OAuth or SAML for secure authentication and role-based access control (RBAC) for authorization.
 
 By leveraging these components and design patterns, both on-premises and cloud-based solutions can meet the requirements effectively while ensuring scalability, performance, and security.
 
