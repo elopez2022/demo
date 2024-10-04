@@ -282,6 +282,13 @@ o	Approval process by HR liaison
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### On-Premises Architecture
+![on-premises-lucidchart](images/on-premises-lucidchart.png)
+
+`On-premises Lucidchart`: https://lucid.app/lucidchart/f31361f2-b396-4df9-9e75-93edb16339be/view
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- Team Members -->
 
 <a id="team"></a>
@@ -313,10 +320,15 @@ Project Link: [https://domain/caltrans/project_name](https://domain/caltrans/pro
 
 ### Resources
 
-| API             | URL                                                                |
+| Workday API             | URL                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Workday REST Services Directory | https://community.workday.com/sites/default/files/file-hosting/restapi/index.html |
 | Workday Web Services (WWS) Directory (v43.0) | https://community.workday.com/sites/default/files/file-hosting/productionapi/versions/v43.0/index.html |
+
+| Azure-Workday             | URL                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Configure Workday to Microsoft Entra user provisioning | https://learn.microsoft.com/en-us/entra/identity/saas-apps/workday-inbound-cloud-only-tutorial |
+| Configure Workday for automatic user provisioning | https://learn.microsoft.com/en-us/entra/identity/saas-apps/workday-inbound-tutorial |
 
 
 
