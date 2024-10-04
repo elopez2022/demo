@@ -37,6 +37,7 @@ In today's dynamic workplace, effective employee management is essential. The go
 <li><strong>The Employee Management System (EMS) is a greenfield project.</strong></li>
 <li><strong>Organization use Active Directory as the user identity repository.</strong></li>
 <li><strong>Organization use Microsoft 365 for its office suite technologies.</strong></li>
+<li><strong>Organization has physical servers at their location when discussing the on-premises scenario.</strong></li>
 <li><strong>While the design and architecture are flexible enough to work with any cloud provider, we may reference specific cloud services or software-as-a-service (SaaS) applications to illustrate how our system might function in a real-world scenario.</strong></li>
 <li><strong>Main focus of this meeting is on system design and architecture and not project management or tooling.</strong></li>
 <li><strong>The architecture incorporates non-functional requirements for security, performance, reliability, uptime, and accuracy.</strong></li>
